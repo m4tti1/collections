@@ -1,4 +1,4 @@
-from collections.website import app
+from collectionsapp.website import app
 
 
 def test_index():
