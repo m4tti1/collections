@@ -5,15 +5,29 @@ body {
 
 header {
     border: 1px solid black;
+    display: flex;
+    margin: 0 200px;
 }
 
 header div,
 header nav {
-    border: 1px solid black 
+    border: 1px solid black;
+    height: 80px;
+}
+
+.logo {
+    flex-basis: 245px;
+    border: 1px solid black;
+}
+
+.search { 
+    flex-basis: 373px;
+    border: 1px solid black;
 }
 
 .account {
-    border: 1px solid black
+    flex-basis: 265px;
+    border: 1px solid black;
 }
 
 footer {
