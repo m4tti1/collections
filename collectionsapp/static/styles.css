@@ -1,12 +1,19 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: roboto mono;
     margin-left: 2rem;
 }
 
-.banner {
-    margin-top: 2rem;
-    color: black;
-    margin-bottom: 1rem;
+header {
+    border: 1px solid black;
+}
+
+header div,
+header nav {
+    border: 1px solid black 
+}
+
+.account {
+    border: 1px solid black
 }
 
 footer {
