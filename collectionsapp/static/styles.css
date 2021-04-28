@@ -1,10 +1,12 @@
 body {
     font-family: roboto mono;
-    margin-left: 2rem;
+    margin-left: none;
+    margin-top: none;
 }
 
 header {
     display: flex;
+    background-color: white;
     margin: 0 200px;
     justify-content: center;
     align-items: center;
