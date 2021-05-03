@@ -1,80 +1,258 @@
 body {
     font-family: roboto mono;
-    margin-left: none;
-    margin-top: none;
 }
 
 header {
     display: flex;
     background-color: white;
-    margin: 0 200px;
+    margin: auto;
+    justify-content: center;
+    /*
     justify-content: center;
     align-items: center;
+    width: 1200px;
+    flex-basis: 1200px;*/
 }
-
 
 
 header div,
 header nav {
     display: flex;
-    border: 1px solid black;
-    border-top-style: none;
     height: 80px;
-    padding: 0px 20px;
+    padding: 0px 0px;
     justify-content: center;
     align-items: center;
-    border-right-style: none;
+    border: 1px solid black;
+    border-top-style: none;
     border-bottom-style: none;
 }
 
 .logo {    
-    flex-basis: 245px;
-    border: 1px solid black;
-    border-top-style: none;
+    /* flex-basis: 245px; */
+    flex: 3;
     border-right-style: none;
-    border-bottom-style: none;
+
 }
+
 
 .search {    
-    flex-basis: 373px;
-    border: 1px solid black;
-    border-top-style: none;
+    /*flex-basis: 440px;*/
+    flex: 4;
     border-right-style: none;
-    border-bottom-style: none;
+
 }
 
-.account_login {
-    flex-basis: 132px;
-    border: 1px solid black;
-    border-top-style: none;
+
+nav{
+    /*flex-basis: auto;*/
+    flex: 2;
     border-right-style: none;
-    border-bottom-style: none;
+    border-left-style: none;
+}
+
+
+.account_login {
+    /*flex-basis: 132px;*/
+    flex: 1.5;
+    border-right-style: none;
+    border-left-style: none;
     color: red;
 }
 
+
 .account_register{
-    flex-basis: 132px;
-    border: 1px solid black;
+    flex: 1.5;
+    /*flex-basis: 132px;*/
     border-left-style: none;
-    border-top-style: none;
-    border-bottom-style: none;
     color: blue;
 }
 
+
 .header_line{
-    border: 1px solid black;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    border-bottom-style: solid;
+    border-bottom: 1px solid black;
 }
 
-footer {
-    margin-top: 5rem;
-    text-align: center;
+
+main{
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+
 }
 
-.button{
-    color: antiquewhite;
-    background-color:firebrick;
+main div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  color: white;
+  flex: 1;
+  text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+  font-size: 32px;
+}
+
+
+.upload_image{
+  border: 1px solid black;
+  padding: 100px;
+  font-family: roboto mono;
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+
+.select_gender{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+  border-right-style: none;
+}
+
+
+.select_category{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+}
+
+
+.type_brand{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+.type_name{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+  border-right-style: none;
+}
+
+
+.type_item_number{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+}
+
+
+.set_date{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  flex: 1;
+  border-right-style: none;
+  border-top-style: none;
+}
+
+
+.type_collection{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 32px 0px 30px 0px;
+  flex: 1;
+  border-top-style: none;
+}
+
+
+.select_color{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  flex: 1;
+  margin-bottom: 40px;
+  border-top-style: none;
+}
+
+
+.type_description{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  height: 30px;
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+
+.type_submission_notes{
+  border: 1px solid black;
+  font-family: roboto mono;
+  text-align: center;
+  padding: 30px 0px;
+  height: 30px;
+  flex: 1;
+  margin-bottom: 40px;
+  
+}
+
+
+.submit_button{
+  border: 1px solid black;
+  font-family: roboto mono;
+  border-radius:30px;
+  color: white;
+  background-color: red;
+  flex: 1;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+
+.cancel_button{
+  border: 1px solid black;
+  font-family: roboto mono;
+  border-radius: 30px;
+  background-color: white;
+  flex: 1;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+
+.type_collection::placeholder{
+  color: black;
+}
+
+.type_brand::placeholder{
+  color: black;
+}
+
+.type_item_number::placeholder{
+  color: black;
+}
+
+.type_name::placeholder{
+  color: black;
+}
+
+.type_submission_notes::placeholder{
+  color: black;
+}
+
+.type_description::placeholder{
+  color: black;
 }
