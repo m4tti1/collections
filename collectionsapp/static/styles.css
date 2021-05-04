@@ -102,14 +102,14 @@ nav{
   font-weight: bold;
 }
 
-main{
+.submit_item_form{
 display: flex;
 margin-top: 60px;
 justify-content: center;
 
 }
 
-main div {
+.submit_item_form div {
 display: flex;
 justify-content: center;
 align-items: center;
