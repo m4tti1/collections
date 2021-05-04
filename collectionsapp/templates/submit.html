@@ -1,148 +1,141 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> {{ page_title }}</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <main>
-        <!-- Form -->
-        <div>
-        <form name="submit_item" action="" target="_self" method=""  > <!-- change site -->
+<section>
+<!-- Form -->
+    <div>
+        <form name="submit_item" action="/item" target="_self" method="post"> <!-- change site -->
             <div>
-            <p class="headline">
-            Add Item
-            </p>
+                <p class="headline">
+                    Add Item
+                </p>
             </div>
             <div>
             <!-- Image -->
-            <label for="image"> </label>
-            <input class="upload_image" type="file" id="image" name="image" accept="image/*">
+                <label for="image"> </label>
+                <input class="upload_image" type="file" id="image" name="image" accept="image/*">
             </div>
             <div>
             <!-- Gender -->
-            <select class="select_gender" name="gender" id="gender">
-                <option value="unisex">Unisex</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                
-            </select>
-            <select class="select_category" name="category" id="category">
-                <optgroup label="Tops">
-                <option value="long_sleeve_t-shirts">Long Sleeve T-Shirts</option>
-                <option value="polos">Polos</option>
-                <option value="shirts">Shirts (Button Ups)</option>
-                <option value="short_sleeve_t-shirts">Short Sleeve T-Shirts</option>
-                <option value="sweaters_knitwear">Sweaters & Knitwear</option>
-                <option value="sweatshirts_hoodies">Sweatshirts & Hoodies</option>
-                <option value="tank_tops_sleeveless">Tank Tops & Sleeveless</option>
-                <option value="jerseys">Jerseys</option>
-                </optgroup>
-                <optgroup label="Bottoms">
-                <option value="casual_pants">Casual Pants</option>
-                <option value="cropped_pants">Cropped Pants</option>
-                <option value="denim">Denim</option>
-                <option value="leggings">Leggings</option>
-                <option value="overalls_jumpsuits">Overalls & Jumpsuits</option>
-                <option value="shorts">Shorts</option>
-                <option value="sweatpants_joggers">Sweatpants & Joggers</option>
-                <option value="swimwear">Swimwear</option>
-                </optgroup>
-                <optgroup label="Outerwear">
-                <option value="bombers">Bombers</option>
-                <option value="cloaks_capes">Cloaks & Capes</option>
-                <option value="denim_jackets">Denim Jackets</option>
-                <option value="heavy_coats">Heavy Coats</option>
-                <option value="leather_jackets">Leather Jackets</option>
-                <option value="light_jackets">Light Jackets</option>
-                <option value="parkas">Parkas</option>
-                <option value="raincoats">Raincoats</option>
-                <option value="vests">Vests</option>
-                </optgroup>
-                <optgroup label="Footwear">
-                <option value="boots">Boots</option>
-                <option value="casual_leather_shoes">Casual Leather Shoes</option>
-                <option value="formal_shoes">Formal Shoes</option>
-                <option value="hi_top_sneakers">Hi-Top Sneakers</option>
-                <option value="low_top_sneakers">Low-Top Sneakers</option>
-                <option value="sandals">Sandals</option>
-                <option value="slip_ons">Slip Ons</option>
-                </optgroup>
-                <optgroup label="Tailoring">
-                <option value="blazers">Blazers</option>
-                <option value="formal_shirting">Formal_Shirting</option>
-                <option value="formal_trousers">Formal_Trousers</option>
-                <option value="suits">Suits</option>
-                <option value="tuxedos">Tuxedos</option>
-                <option value="vests">Vests</option>
-                </optgroup>
-            </select>
+                <select class="select_gender" name="gender" id="gender">
+                    <option value="unisex">Unisex</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option> 
+                </select>
+                <!-- category -->
+                <select class="select_category" name="category" id="category">
+                    <optgroup label="Tops">
+                        <option value="long_sleeve_t-shirts">Long Sleeve T-Shirts</option>
+                        <option value="polos">Polos</option>
+                        <option value="shirts">Shirts (Button Ups)</option>
+                        <option value="short_sleeve_t-shirts">Short Sleeve T-Shirts</option>
+                        <option value="sweaters_knitwear">Sweaters & Knitwear</option>
+                        <option value="sweatshirts_hoodies">Sweatshirts & Hoodies</option>
+                        <option value="tank_tops_sleeveless">Tank Tops & Sleeveless</option>
+                        <option value="jerseys">Jerseys</option>
+                    </optgroup>
+                    <optgroup label="Bottoms">
+                        <option value="casual_pants">Casual Pants</option>
+                        <option value="cropped_pants">Cropped Pants</option>
+                        <option value="denim">Denim</option>
+                        <option value="leggings">Leggings</option>
+                        <option value="overalls_jumpsuits">Overalls & Jumpsuits</option>
+                        <option value="shorts">Shorts</option>
+                        <option value="sweatpants_joggers">Sweatpants & Joggers</option>
+                        <option value="swimwear">Swimwear</option>
+                    </optgroup>
+                    <optgroup label="Outerwear">
+                        <option value="bombers">Bombers</option>
+                        <option value="cloaks_capes">Cloaks & Capes</option>
+                        <option value="denim_jackets">Denim Jackets</option>
+                        <option value="heavy_coats">Heavy Coats</option>
+                        <option value="leather_jackets">Leather Jackets</option>
+                        <option value="light_jackets">Light Jackets</option>
+                        <option value="parkas">Parkas</option>
+                        <option value="raincoats">Raincoats</option>
+                        <option value="vests">Vests</option>
+                    </optgroup>
+                    <optgroup label="Footwear">
+                        <option value="boots">Boots</option>
+                        <option value="casual_leather_shoes">Casual Leather Shoes</option>
+                        <option value="formal_shoes">Formal Shoes</option>
+                        <option value="hi_top_sneakers">Hi-Top Sneakers</option>
+                        <option value="low_top_sneakers">Low-Top Sneakers</option>
+                        <option value="sandals">Sandals</option>
+                        <option value="slip_ons">Slip Ons</option>
+                    </optgroup>
+                    <optgroup label="Tailoring">
+                        <option value="blazers">Blazers</option>
+                        <option value="formal_shirting">Formal_Shirting</option>
+                        <option value="formal_trousers">Formal_Trousers</option>
+                        <option value="suits">Suits</option>
+                        <option value="tuxedos">Tuxedos</option>
+                        <option value="vests">Vests</option>
+                    </optgroup>
+                </select>
             </div>
+            <!-- brand -->
             <div>
-            <input class="type_brand" type="text" id="brand" name="brand" placeholder="Brand">
+                <input class="type_brand" type="text" id="brand" name="brand" placeholder="Brand">
             </div>
+            <!-- name -->
             <div>
-            <input class="type_name" type="text" id="name" name="name" placeholder="Name">
-            <input class="type_item_number" type="text" id="item_number" name="item_number" placeholder="Item Number/Identifier">
+                <input class="type_name" type="text" id="name" name="name" placeholder="Name">
+                <input class="type_item_number" type="text" id="item_number" name="item_number" placeholder="Item Number/Identifier">
             </div>
+            <!-- date -->
             <div>
-            <input class="set_date" type="date" id="release_date" name="release_date" placeholder="Release Date">
-            <input class="type_collection" type="text" id="collection" name="collection" placeholder="Collection">
+                <input class="set_date" type="date" id="release_date" name="release_date" placeholder="Release Date">
+                <input class="type_collection" type="text" id="collection" name="collection" placeholder="Collection">
             </div>
+            <!--  color -->
             <div>
-            <select class="select_color" name="color" id="color">
-                <option value="colors">Color</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
-                <option value="grey">Grey</option>
-                <option value="beige">Beige</option>
-                <option value="pink">Pink</option>
-                <option value="purple">Purple</option>
-                <option value="red">Red</option>
-                <option value="yellow">Yellow</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="orange">Orange</option>
-                <option value="white">White</option>
-                <option value="silver">Silver</option>
-                <option value="gold">Gold</option>
-                <option value="multi_colored">Multicolored</option>
-                <option value="khaki">Khaki</option>
-                <option value="turquoise">Turquoise</option>
-                <option value="cream">Cream</option>
-                <option value="apricot">Apricot</option>
-                <option value="coral_red">Coral Red</option>
-                <option value="burgundy">Burgundy</option>
-                <option value="rose">Rose</option>
-                <option value="lilac">Lilac</option>
-                <option value="ligh_blue">Light Blue</option>
-                <option value="navy_blue">Navy_Blue</option>
-                <option value="dark_green">Dark Green</option>
-                <option value="mustard">Mustard</option>
-                <option value="mint_green">Mint Green</option>
-            </select>
+                <select class="select_color" name="color" id="color">
+                    <option value="colors">Color</option>
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+                    <option value="grey">Grey</option>
+                    <option value="beige">Beige</option>
+                    <option value="pink">Pink</option>
+                    <option value="purple">Purple</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="orange">Orange</option>
+                    <option value="white">White</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="multi_colored">Multicolored</option>
+                    <option value="khaki">Khaki</option>
+                    <option value="turquoise">Turquoise</option>
+                    <option value="cream">Cream</option>
+                    <option value="apricot">Apricot</option>
+                    <option value="coral_red">Coral Red</option>
+                    <option value="burgundy">Burgundy</option>
+                    <option value="rose">Rose</option>
+                    <option value="lilac">Lilac</option>
+                    <option value="ligh_blue">Light Blue</option>
+                    <option value="navy_blue">Navy_Blue</option>
+                    <option value="dark_green">Dark Green</option>
+                    <option value="mustard">Mustard</option>
+                    <option value="mint_green">Mint Green</option>
+                </select>
             </div>
+            <!-- description -->
             <div>
-            <textarea class="type_description" type="text" id="description" name="description" placeholder="Description"></textarea>
+                <textarea class="type_description" type="text" id="description" name="description" placeholder="Description"></textarea>
             </div>
+            <!-- submission notes -->
             <div>
-            <textarea class="type_submission_notes" type="text" id="submission_notes" name="submission_notes" placeholder="Submission Notes"></textarea>
+                <textarea class="type_submission_notes" type="text" id="submission_notes" name="submission_notes" placeholder="Submission Notes"></textarea>
             </div>
             <!-- change cancel button -->
             <div>
-            <button class="cancel_button" type="reset" value="Reset" >Cancel</button>
-            <button class="submit_button" type="submit" form="submit_item" value="Submit">Submit</button>
+                <button class="cancel_button" type="reset" value="Reset" >Cancel</button>
+                <button class="submit_button" type="submit" form="submit_item" value="Submit">Submit</button>
             </div>
         </form>
-        </div>
-  </main>
-</html>
+    </div>
+</section>
 {% endblock %}  
