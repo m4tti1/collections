@@ -12,15 +12,15 @@ def index():
     return render_template('index.html', page_title="collections")
 
 @app.route('/brand')
-def index():
+def brand():
     return render_template('brand.html')
 
 @app.route('/item')
-def index():
+def item():
     return render_template('item.html')
 
 @app.route('/submit')
-def index():
+def submit():
     return render_template('submit.html')
 
 #@app.route('/item', methods=['POST'])
