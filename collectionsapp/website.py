@@ -14,15 +14,15 @@ def index():
 
 @app.route('/brand')
 def index():
-    return render_template('brand.html', page_title="collections")
+    return render_template('brand.html')
 
 @app.route('/item')
 def index():
-    return render_template('item.html', page_title="collections")
+    return render_template('item.html')
 
 @app.route('/submit')
 def index():
-    return render_template('submit.html', page_title="collections")
+    return render_template('submit.html')
 
 #@app.route('/item', methods=['POST'])
 #def safe_item_data():
