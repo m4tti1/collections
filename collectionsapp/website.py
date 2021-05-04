@@ -8,7 +8,6 @@ app.config.from_pyfile("config.py")
 
 
 @app.route('/')
-@app.route('/index')
 def index():
     return render_template('index.html', page_title="collections")
 
