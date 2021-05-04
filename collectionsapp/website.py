@@ -8,8 +8,21 @@ app.config.from_pyfile("config.py")
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html', page_title="collections")
+
+@app.route('/brand')
+def index():
+    return render_template('brand.html', page_title="collections")
+
+@app.route('/item')
+def index():
+    return render_template('item.html', page_title="collections")
+
+@app.route('/submit')
+def index():
+    return render_template('submit.html', page_title="collections")
 
 #@app.route('/item', methods=['POST'])
 #def safe_item_data():
