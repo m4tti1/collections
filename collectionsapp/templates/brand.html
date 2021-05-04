@@ -1,75 +1,121 @@
 {% extends "base.html" %}
 
 {% block content %}
-<body>
-    <div>
-      <p>
-          Add Item
-      </p>
-    </div>  
-    <div class="container">
-        <div id="image_column">
-          <img class="brandimage" src="https://cdn.glitch.com/24dd9f0b-8afe-4809-9f0a-7720552a637f%2F4158eaef-adec-4c2d-a1d1-a0769f45138a.image.png?v=1620061679115" alt="off-white-logo" width="600" height="600">
-        </div>
-        <div id="property1">
-            <div class="profile_property">
-              <p>
-                Profile
-              </p>
-            </div>
-        </div>
-        <div id="content1">
-          <div class="profile_content">
-            <p>
-              ...
-            </p>
-          </div>
-       </div>
-        <div id="property2">
-          <div class="other_properties">
-            <p>
-              Founder
-            </p>
-          </div>
-        </div>
-        <div id="content2">
-          <div class="founder_content">
-            <p>
-             ... 
-            </p>
-          </div>
-        </div>
-        <div id="property3">
-          <div class="other_properties">
-            <p>
-              Established
-            </p>
-          </div>
-        </div>
-        <div id="content3">
-          <div class="established_content">
-            <p>
-              ...
-            </p>
-          </div>
-        </div>
-        <div id="property4">
-          <div class="other_properties">
-            <p>
-              Sites
-            </p>
-          </div>
-        </div>
-        <div id="content4">
-          <div class="sites_content">
-            <p>
-              ...
-            </p>
-          </div>
-        </div>
-          <div id="placeholder1"></div>
-          <div id="placeholder2"></div>
+<section>
+  <div>
+    <p>
+      Brand Name
+    </p>
+  </div>  
+  <div class="brand_container">
+    <div id="brand_image_column">
+        <img class="brand_image_content" src="" alt="off-white-logo" width="600" height="600">
     </div>
-</body>
-
+    <div id="brand_profile_property_cell">
+      <div class="profile_cell_property_format">
+        <p>
+            Profile
+        </p>
+      </div>
+    </div>
+    <div id="brand_profile_content_cell">
+      <div class="profile_content">
+        <p>
+        ...
+        </p>
+      </div>
+    </div>
+    <div id="brand_founder_property_cell">
+      <div class="brand_property_cell_format">
+        <p>
+          Founder
+        </p>
+      </div>
+    </div>
+    <div id="brand_founder_content_cell">
+      <div class="founder_content">
+        <p>
+         ... 
+        </p>
+      </div>
+    </div>
+    <div id="brand_established_property_cell">
+      <div class="brand_property_cell_format">
+        <p>
+          Established
+        </p>
+      </div>
+    </div>
+    <div id="brand_established_content_cell">
+      <div class="established_content">
+        <p>
+          ...
+        </p>
+      </div>
+    </div>
+    <div id="brand_sites_property_cell">
+      <div class="brand_property_cell_format">
+        <p>
+          Sites
+        </p>
+      </div>
+   </div>
+   <div id="brand_sites_content_cell">
+      <div class="sites_content">
+        <p>
+          ...
+        </p>
+     </div>
+    </div>
+    <div id="brand_placeholder1"></div>
+     <div id="brand_placeholder2"></div>
+  </div>
+</section>
+<section>
+  <div>
+    <p>
+      Catalog
+    </p>
+  </div>  
+  <div class="catalog">
+	  <div id="catalog_legend">
+			<div class="legend">Image</div>
+			<div class="legend">Item Name</div>
+			<div class="legend">Category</div>
+			<div class="legend">Release Date</div>
+			<div class="legend">Gender</div>
+			<div class="legend">Collection</div>
+		</div>
+		<div id="catalog_image">
+			<div class="catalog_image_content">
+				...
+			</div>
+    </div>
+		<div id="catalog_item_name">
+			<div class="catalog_item_name_content">
+				...
+			</div>
+    </div>
+		<div id="catalog_category">
+			<div class="catalog_category_content">
+			  ...
+			</div>
+    </div>
+		<div id="catalog_release_date">
+			<div class="catalog_release_date_content">
+				...
+			</div>
+    </div>
+	  <div id="catalog_gender">
+			<div class="catalog_gender_content">
+				...
+			</div>
+    </div>
+		<div id="catalog_collection">
+			<div class="catalog_collection_content">
+				...
+			</div>
+    </div>
+  </div>
+</section>
 {% endblock %}  
