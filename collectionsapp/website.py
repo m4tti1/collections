@@ -1,11 +1,13 @@
 from flask import Flask
 from flask import render_template, redirect, request, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 # configure Flask using environment variables
 app.config.from_pyfile("config.py")
 
+app.config ['SQLALCHEMY_DATABASE_URI'] = 'postgresql://matti:E=8)@b*k;"HS,@@localhost.session.sql'
 
 @app.route('/')
 def index():
